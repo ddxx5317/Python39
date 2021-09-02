@@ -100,7 +100,7 @@ if __name__ == '__main__':  # 主函数入口
     A.headers = headers
     ###############################
 
-    word = input("请输入搜索关键词(可以是人名，地名等): ")
+    word = input("请输入搜索关键词: ")
     # add = 'http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=%E5%BC%A0%E5%A4%A9%E7%88%B1&pn=120'
     url = 'https://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=' + word + '&pn='
 
@@ -109,7 +109,7 @@ if __name__ == '__main__':  # 主函数入口
     Recommend = recommend(url)  # 记录相关推荐
     print('经过检测%s类图片共有%d张' % (word, tot))
     numPicture = int(input('请输入想要下载的图片数量：'))
-    file = input('请建立一个存储图片的文件夹，输入文件夹名称即可：')
+    file = input('请建立一个存储图片的文件夹名称：')
     y = os.path.exists(file)
     if y == 1:
         print('该文件已存在，请重新输入')
